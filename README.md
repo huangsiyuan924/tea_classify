@@ -43,7 +43,7 @@ kaggle地址在：https://www.kaggle.com/alxmamaev/flowers-recognition?select=fl
 数据集目录树：
 
     datasets
-
+    
     +---test_data
     
     |   +---daisy
@@ -59,14 +59,14 @@ kaggle地址在：https://www.kaggle.com/alxmamaev/flowers-recognition?select=fl
         +---dandelion
         
         \---rose
-        
+
 其中训练集共有300张，三类分别各有100张
 
 测试集共有600张，三类各有200张
 
 经过数据增强后，训练集共有18300张
 
-数据增强函数在data_augmentation.py中
+数据增强函数在[data_augmentation.py](./data_augmentation.py)中
 
 
 ```python
@@ -177,7 +177,7 @@ summary(model, (3, 256, 256))
 
     e:\python_venv\torch_venv\lib\site-packages\torch\nn\functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  ..\c10/core/TensorImpl.h:1156.)
       return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
-    
+
 
     ==========================================================================================
     Layer (type:depth-idx)                   Output Shape              Param #
@@ -201,7 +201,7 @@ summary(model, (3, 256, 256))
     Params size (MB): 6.21
     Estimated Total Size (MB): 9.97
     ==========================================================================================
-    
+
 
 
 
@@ -606,8 +606,9 @@ writer.close()
     Train Epoch: 30 [17664/18300 (96%)]	Loss: 0.001094 	Lr:1.00E-05
     
     Test set: Average loss: 2.3700, Accuracy: 449/600 (75%)
-    
-    
+
+
+​    
 
 ### 训练过程可视化
 从上到下，从左往右三图依次是训练集的loss变化、测试集的正确率变化、测试集的loss变化
